@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.2 on win32)" generated="2025-05-30T08:42:46.144094" rpa="false" schemaversion="5">
+<suite id="s1" name="Casos Teste Testes" source="c:\Users\flash\Documents\PJBL_RA3--ROBOT-GIULIA\testes_giulia\casos_teste_testes.robot">
+<test id="s1-t1" name="CT1 - Tentar cadastrar cliente com cpf inválido" line="6">
+<kw name="Abrir o navegador" owner="casos_teste_resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-30T08:42:46.708537" level="INFO">Opening browser 'chrome' to base url 'http://localhost/Sem-Esperar-em-Filas/'.</msg>
+<msg time="2025-05-30T08:42:51.181183" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-30T08:42:46.708537" elapsed="6.300506"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-30T08:42:53.009862" elapsed="0.044330"/>
+</kw>
+<status status="PASS" start="2025-05-30T08:42:46.708537" elapsed="6.347667"/>
+</kw>
+<kw name="Acessar a pagina de cadastro" owner="casos_teste_resources">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-30T08:42:53.056204" level="INFO">Opening url 'http://localhost/Sem-Esperar-em-Filas/Components/userRegister/cadastro.html'</msg>
+<arg>http://localhost/Sem-Esperar-em-Filas/Components/userRegister/cadastro.html</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-30T08:42:53.056204" elapsed="0.164299"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id:nome</arg>
+<arg>timeout=2s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-30T08:42:53.223375" elapsed="0.022304"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-30T08:42:54.250194" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-30T08:42:53.249864" elapsed="1.000330"/>
+</kw>
+<status status="PASS" start="2025-05-30T08:42:53.056204" elapsed="1.193990"/>
+</kw>
+<kw name="Preencher campos de cadastro com CPF inválido" owner="casos_teste_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-30T08:42:54.250194" level="INFO">Typing text 'Teste CPF Inválido' into text field 'id:nome'.</msg>
+<arg>id:nome</arg>
+<arg>${NOME_CLIENTE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T08:42:54.250194" elapsed="0.116479"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-30T08:42:54.373106" level="INFO">Typing text '111.111.111-11' into text field 'id:cpf'.</msg>
+<arg>id:cpf</arg>
+<arg>${CPF_INVALIDO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T08:42:54.373106" elapsed="0.094705"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-30T08:42:54.467811" level="INFO">Typing text 'teste@email.com' into text field 'id:email'.</msg>
+<arg>id:email</arg>
+<arg>${EMAIL_VALIDO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T08:42:54.467811" elapsed="0.100357"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-30T08:42:54.568168" level="INFO">Typing text '(11) 91234-5678' into text field 'id:telefone'.</msg>
+<arg>id:telefone</arg>
+<arg>${TELEFONE_VALIDO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T08:42:54.568168" elapsed="0.107935"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-30T08:42:54.676103" level="INFO">Typing text 'testeCPF' into text field 'id:login'.</msg>
+<arg>id:login</arg>
+<arg>${LOGIN_CLIENTE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T08:42:54.676103" elapsed="0.095054"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-30T08:42:54.776334" level="INFO">Typing text 'senha123' into text field 'id:senha'.</msg>
+<arg>id:senha</arg>
+<arg>${SENHA_CLIENTE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T08:42:54.771157" elapsed="0.081731"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-30T08:42:54.852888" level="INFO">Typing text 'senha123' into text field 'id:confirmarSenha'.</msg>
+<arg>id:confirmarSenha</arg>
+<arg>${CONFIRMAR_SENHA_CLIENTE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T08:42:54.852888" elapsed="0.082953"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-30T08:42:55.936063" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-30T08:42:54.935841" elapsed="1.000222"/>
+</kw>
+<status status="PASS" start="2025-05-30T08:42:54.250194" elapsed="1.685869"/>
+</kw>
+<kw name="Clicar no botão Cadastrar" owner="casos_teste_resources">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-30T08:42:55.942599" level="INFO">Clicking button 'xpath=//button[contains(text(), "Cadastrar")]'.</msg>
+<arg>xpath=//button[contains(text(), "Cadastrar")]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-30T08:42:55.940951" elapsed="0.107219"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-30T08:42:57.050252" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-30T08:42:56.048170" elapsed="1.002082"/>
+</kw>
+<status status="PASS" start="2025-05-30T08:42:55.940951" elapsed="1.109301"/>
+</kw>
+<kw name="Verificar mensagem de erro CPF" owner="casos_teste_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.swal2-popup</arg>
+<arg>timeout=2s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-30T08:42:57.054272" elapsed="0.023928"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-30T08:42:57.155810" level="INFO">Element 'css:.swal2-html-container' contains text 'CPF inválido'.</msg>
+<arg>css:.swal2-html-container</arg>
+<arg>CPF inválido</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-05-30T08:42:57.078200" elapsed="0.077610"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-30T08:42:58.160615" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-30T08:42:57.160213" elapsed="1.000402"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-05-30T08:42:58.597995" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-05-30T08:42:58.160615" elapsed="0.437380"/>
+</kw>
+<status status="PASS" start="2025-05-30T08:42:57.052261" elapsed="1.545734"/>
+</kw>
+<kw name="Fechar o navegador" owner="casos_teste_resources">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-30T08:42:59.601021" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-30T08:42:58.600922" elapsed="1.000630"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-05-30T08:43:00.017884" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-05-30T08:42:59.601552" elapsed="0.430051"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-30T08:43:00.031603" elapsed="2.236933"/>
+</kw>
+<status status="PASS" start="2025-05-30T08:42:58.597995" elapsed="3.670541"/>
+</kw>
+<status status="PASS" start="2025-05-30T08:42:46.708537" elapsed="15.559999"/>
+</test>
+<doc>Teste do Cadastro de cliente com cpf inválido e Login do cliente com usuário e senha válidos</doc>
+<status status="PASS" start="2025-05-30T08:42:46.153659" elapsed="16.114877"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Casos Teste Testes" id="s1" pass="1" fail="0" skip="0">Casos Teste Testes</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-30T08:42:51.181183" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)</msg>
+</errors>
+</robot>
